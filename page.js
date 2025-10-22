@@ -1,4 +1,4 @@
-import { useMemo, useState } from "https://esm.sh/react";
+import { useMemo } from "https://esm.sh/react";
 import { motion } from "https://esm.sh/framer-motion";
 import {
   Mail,
@@ -10,8 +10,6 @@ import {
   Cpu,
   Shield,
   Users,
-  Github,
-  Globe,
 } from "https://esm.sh/lucide-react";
 
 const DATA = {
@@ -127,103 +125,11 @@ const Section = ({ id, icon: Icon, title, children }) =>
   );
 
 export default function PersonalPage() {
-  const [activeTab, setActiveTab] = useState("About");
-  const tabs = [
-    { name: "About", icon: Cpu },
-    { name: "Research", icon: Shield },
-    { name: "Publications", icon: BookOpen },
-    { name: "Teaching", icon: Award },
-    { name: "Service", icon: Users },
-    { name: "Contact", icon: Mail },
-  ];
   const hasAnyLinks = useMemo(
     () =>
       DATA.linkedinUrl || DATA.scholarUrl || DATA.githubUrl || DATA.websiteUrl,
     []
   );
-
-  function renderTabContent() {
-    switch (activeTab) {
-      case "About":
-        return (
-          React.createElement(Section, {
-            id: "about",
-            icon: Cpu,
-            title: "About",
-            children: React.createElement("div", {},
-              React.createElement("p", { className: "mb-2", children: DATA.tagline }),
-              React.createElement("p", { className: "mb-2", children: DATA.currentRole }),
-              React.createElement("p", { className: "mb-2", children: DATA.location })
-            )
-          })
-        );
-      case "Research":
-        return (
-          React.createElement(Section, {
-            id: "research",
-            icon: Shield,
-            title: "Research Focus",
-            children: React.createElement("ul", { className: "list-disc pl-5" },
-              DATA.researchFocus.map((item, i) => React.createElement("li", { key: i }, item))
-            )
-          })
-        );
-      case "Publications":
-        return (
-          React.createElement(Section, {
-            id: "publications",
-            icon: BookOpen,
-            title: "Publications",
-            children: React.createElement("ul", { className: "list-disc pl-5" },
-              DATA.publications.map((pub, i) =>
-                React.createElement("li", { key: i },
-                  React.createElement("a", { href: pub.link, target: "_blank", rel: "noreferrer", className: "text-blue-600 underline" }, pub.title),
-                  ` (${pub.venue}) - ${pub.authors}`
-                )
-              )
-            )
-          })
-        );
-      case "Teaching":
-        return (
-          React.createElement(Section, {
-            id: "teaching",
-            icon: Award,
-            title: "Teaching",
-            children: React.createElement("ul", { className: "list-disc pl-5" },
-              DATA.teaching.map((item, i) => React.createElement("li", { key: i }, item))
-            )
-          })
-        );
-      case "Service":
-        return (
-          React.createElement(Section, {
-            id: "service",
-            icon: Users,
-            title: "Service",
-            children: React.createElement("ul", { className: "list-disc pl-5" },
-              DATA.service.map((item, i) => React.createElement("li", { key: i }, item))
-            )
-          })
-        );
-      case "Contact":
-        return (
-          React.createElement(Section, {
-            id: "contact",
-            icon: Mail,
-            title: "Contact",
-            children: React.createElement("div", { className: "flex flex-wrap gap-3" },
-              DATA.email && React.createElement("a", { href: `mailto:${DATA.email}`, className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(Mail, { className: "w-4 h-4" }), "Email"),
-              DATA.linkedinUrl && React.createElement("a", { href: DATA.linkedinUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(Linkedin, { className: "w-4 h-4" }), "LinkedIn"),
-              DATA.scholarUrl && React.createElement("a", { href: DATA.scholarUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(GraduationCap, { className: "w-4 h-4" }), "Google Scholar"),
-              DATA.cvUrl && React.createElement("a", { href: DATA.cvUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(FileText, { className: "w-4 h-4" }), "Resume / CV")
-            )
-          })
-        );
-      default:
-        return null;
-    }
-  }
 
   return React.createElement(
     "div",
@@ -249,28 +155,132 @@ export default function PersonalPage() {
         ),
         React.createElement(
           "nav",
-          { className: "flex gap-2 text-sm" },
-          tabs.map(tab =>
-            React.createElement(
-              "button",
-              {
-                key: tab.name,
-                onClick: () => setActiveTab(tab.name),
-                className:
-                  `px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === tab.name ? "bg-blue-600 text-white" : "bg-white text-blue-600 hover:bg-blue-50"}`,
-              },
-              React.createElement(tab.icon, { className: "w-4 h-4 mr-2 inline" }),
-              tab.name
-            )
+          { className: "hidden md:flex gap-6 text-sm" },
+          ["About", "Research", "Publications", "Teaching", "Service", "Contact"].map(
+            (n) =>
+              React.createElement(
+                "a",
+                { key: n, href: `#${n.toLowerCase()}`, className: "hover:underline" },
+                n
+              )
           )
         )
       )
     ),
-    // --- Tab Content ---
+
+    // --- Hero ---
     React.createElement(
-      "main",
-      { className: "max-w-6xl mx-auto px-4 py-10" },
-      renderTabContent()
+      "section",
+      { className: "pt-14 pb-10" },
+      React.createElement(
+        "div",
+        {
+          className:
+            "max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center",
+        },
+        React.createElement(
+          motion.div,
+          { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 } },
+          React.createElement("h1", {
+            className: "text-3xl md:text-4xl font-bold leading-tight",
+            children: DATA.name,
+          }),
+          React.createElement("p", {
+            className: "mt-2 text-lg text-slate-700",
+            children: DATA.tagline,
+          }),
+          React.createElement("p", {
+            className: "mt-3 text-slate-600",
+            children: DATA.currentRole,
+          }),
+          React.createElement("p", {
+            className: "mt-1 text-slate-600",
+            children: DATA.location,
+          }),
+          hasAnyLinks &&
+            React.createElement(
+              "div",
+              { className: "mt-4 flex flex-wrap items-center gap-3 text-sm" },
+              DATA.email &&
+                React.createElement(
+                  "a",
+                  {
+                    href: `mailto:${DATA.email}`,
+                    className:
+                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
+                  },
+                  React.createElement(Mail, { className: "w-4 h-4" }),
+                  "Email"
+                ),
+              DATA.linkedinUrl &&
+                React.createElement(
+                  "a",
+                  {
+                    href: DATA.linkedinUrl,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    className:
+                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
+                  },
+                  React.createElement(Linkedin, { className: "w-4 h-4" }),
+                  "LinkedIn"
+                ),
+              DATA.scholarUrl &&
+                React.createElement(
+                  "a",
+                  {
+                    href: DATA.scholarUrl,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    className:
+                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
+                  },
+                  React.createElement(GraduationCap, { className: "w-4 h-4" }),
+                  "Google Scholar"
+                ),
+              DATA.cvUrl &&
+                React.createElement(
+                  "a",
+                  {
+                    href: DATA.cvUrl,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    className:
+                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
+                  },
+                  React.createElement(FileText, { className: "w-4 h-4" }),
+                  "Resume / CV"
+                )
+            )
+        ),
+        React.createElement(
+          motion.div,
+          { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 } },
+          React.createElement(
+            "div",
+            {
+              className:
+                "relative rounded-3xl border p-5 shadow-sm bg-white",
+            },
+            React.createElement(
+              "h3",
+              {
+                className:
+                  "text-base font-semibold mb-3 flex items-center gap-2",
+              },
+              React.createElement(Shield, { className: "w-4 h-4" }),
+              "Research Focus"
+            ),
+            React.createElement(
+              "ul",
+              { className: "space-y-2 text-slate-700 list-disc pl-5" },
+              DATA.researchFocus.map((item, i) =>
+                React.createElement("li", { key: i }, item)
+              )
+            )
+          )
+        )
+      )
     )
   );
 }
