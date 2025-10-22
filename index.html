@@ -4,28 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Murtadha Alsayegh, Ph.D.</title>
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>html{scroll-behavior:smooth}</style>
+  </head>
+  <body class="antialiased bg-gray-50 text-slate-900">
+    <div id="root"></div>
 
-    <!-- Load dependencies (React, Motion, Lucide) -->
+    <!-- Load AFTER #root so it exists; page.js imports its own deps -->
     <script type="module">
       import React from "https://esm.sh/react";
       import { createRoot } from "https://esm.sh/react-dom/client";
-      import * as FramerMotion from "https://esm.sh/framer-motion";
-      import * as Lucide from "https://esm.sh/lucide-react";
       import PersonalPage from "./page.js";
 
-      window.React = React;
-      window.FramerMotion = FramerMotion;
-      window.Lucide = Lucide;
-
-      const root = createRoot(document.getElementById("root"));
+      const el = document.getElementById("root");
+      const root = createRoot(el);
       root.render(React.createElement(PersonalPage));
     </script>
-  </head>
-
-  <body class="antialiased bg-gray-50 text-slate-900">
-    <div id="root"></div>
   </body>
 </html>
