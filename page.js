@@ -131,6 +131,7 @@ export default function PersonalPage() {
     []
   );
 
+  // Add sections for anchor navigation
   return React.createElement(
     "div",
     { className: "min-h-screen bg-gradient-to-b from-white to-slate-50" },
@@ -168,118 +169,57 @@ export default function PersonalPage() {
       )
     ),
 
-    // --- Hero ---
+    // --- Sections ---
     React.createElement(
-      "section",
-      { className: "pt-14 pb-10" },
-      React.createElement(
-        "div",
-        {
-          className:
-            "max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center",
-        },
-        React.createElement(
-          motion.div,
-          { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 } },
-          React.createElement("h1", {
-            className: "text-3xl md:text-4xl font-bold leading-tight",
-            children: DATA.name,
-          }),
-          React.createElement("p", {
-            className: "mt-2 text-lg text-slate-700",
-            children: DATA.tagline,
-          }),
-          React.createElement("p", {
-            className: "mt-3 text-slate-600",
-            children: DATA.currentRole,
-          }),
-          React.createElement("p", {
-            className: "mt-1 text-slate-600",
-            children: DATA.location,
-          }),
-          hasAnyLinks &&
-            React.createElement(
-              "div",
-              { className: "mt-4 flex flex-wrap items-center gap-3 text-sm" },
-              DATA.email &&
-                React.createElement(
-                  "a",
-                  {
-                    href: `mailto:${DATA.email}`,
-                    className:
-                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
-                  },
-                  React.createElement(Mail, { className: "w-4 h-4" }),
-                  "Email"
-                ),
-              DATA.linkedinUrl &&
-                React.createElement(
-                  "a",
-                  {
-                    href: DATA.linkedinUrl,
-                    target: "_blank",
-                    rel: "noreferrer",
-                    className:
-                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
-                  },
-                  React.createElement(Linkedin, { className: "w-4 h-4" }),
-                  "LinkedIn"
-                ),
-              DATA.scholarUrl &&
-                React.createElement(
-                  "a",
-                  {
-                    href: DATA.scholarUrl,
-                    target: "_blank",
-                    rel: "noreferrer",
-                    className:
-                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
-                  },
-                  React.createElement(GraduationCap, { className: "w-4 h-4" }),
-                  "Google Scholar"
-                ),
-              DATA.cvUrl &&
-                React.createElement(
-                  "a",
-                  {
-                    href: DATA.cvUrl,
-                    target: "_blank",
-                    rel: "noreferrer",
-                    className:
-                      "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm",
-                  },
-                  React.createElement(FileText, { className: "w-4 h-4" }),
-                  "Resume / CV"
-                )
-            )
-        ),
-        React.createElement(
-          motion.div,
-          { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 } },
-          React.createElement(
-            "div",
-            {
-              className:
-                "relative rounded-3xl border p-5 shadow-sm bg-white",
-            },
-            React.createElement(
-              "h3",
-              {
-                className:
-                  "text-base font-semibold mb-3 flex items-center gap-2",
-              },
-              React.createElement(Shield, { className: "w-4 h-4" }),
-              "Research Focus"
-            ),
-            React.createElement(
-              "ul",
-              { className: "space-y-2 text-slate-700 list-disc pl-5" },
-              DATA.researchFocus.map((item, i) =>
-                React.createElement("li", { key: i }, item)
-              )
-            )
+      Section,
+      { id: "about", icon: Cpu, title: "About" },
+      React.createElement("div", {},
+        React.createElement("p", { className: "mb-2", children: DATA.tagline }),
+        React.createElement("p", { className: "mb-2", children: DATA.currentRole }),
+        React.createElement("p", { className: "mb-2", children: DATA.location })
+      )
+    ),
+    React.createElement(
+      Section,
+      { id: "research", icon: Shield, title: "Research Focus" },
+      React.createElement("ul", { className: "list-disc pl-5" },
+        DATA.researchFocus.map((item, i) => React.createElement("li", { key: i }, item))
+      )
+    ),
+    React.createElement(
+      Section,
+      { id: "publications", icon: BookOpen, title: "Publications" },
+      React.createElement("ul", { className: "list-disc pl-5" },
+        DATA.publications.map((pub, i) =>
+          React.createElement("li", { key: i },
+            React.createElement("a", { href: pub.link, target: "_blank", rel: "noreferrer", className: "text-blue-600 underline" }, pub.title),
+            ` (${pub.venue}) - ${pub.authors}`
           )
         )
+      )
+    ),
+    React.createElement(
+      Section,
+      { id: "teaching", icon: Award, title: "Teaching" },
+      React.createElement("ul", { className: "list-disc pl-5" },
+        DATA.teaching.map((item, i) => React.createElement("li", { key: i }, item))
+      )
+    ),
+    React.createElement(
+      Section,
+      { id: "service", icon: Users, title: "Service" },
+      React.createElement("ul", { className: "list-disc pl-5" },
+        DATA.service.map((item, i) => React.createElement("li", { key: i }, item))
+      )
+    ),
+    React.createElement(
+      Section,
+      { id: "contact", icon: Mail, title: "Contact" },
+      React.createElement("div", { className: "flex flex-wrap gap-3" },
+        DATA.email && React.createElement("a", { href: `mailto:${DATA.email}`, className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(Mail, { className: "w-4 h-4" }), "Email"),
+        DATA.linkedinUrl && React.createElement("a", { href: DATA.linkedinUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(Linkedin, { className: "w-4 h-4" }), "LinkedIn"),
+        DATA.scholarUrl && React.createElement("a", { href: DATA.scholarUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(GraduationCap, { className: "w-4 h-4" }), "Google Scholar"),
+        DATA.cvUrl && React.createElement("a", { href: DATA.cvUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" }, React.createElement(FileText, { className: "w-4 h-4" }), "Resume / CV")
       )
     )
   );
