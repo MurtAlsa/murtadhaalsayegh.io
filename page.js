@@ -65,8 +65,8 @@ const DATA = {
   ],
 
   news: [
-    { date: "Oct 2025", text: "Phone interview for Research Scientist (Reinforcement Learning) at Boston Dynamics." },
-    { date: "2025", text: "IEEE CASE paper on Secure MPC for strawberry harvesting coordination." },
+    // { date: "Oct 2025", text: "Phone interview for Research Scientist (Reinforcement Learning) at Boston Dynamics." },
+    { date: "August 2025", text: "IEEE CASE paper on Secure MPC for strawberry harvesting coordination." },
   ],
 };
 
