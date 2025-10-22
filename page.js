@@ -18,18 +18,19 @@ const DATA = {
   githubUrl: "https://github.com/MurtAlsa",
   cvUrl: "https://murtalsa.github.io/murtadhaalsayegh.io/Murtadha_Alsayegh_CV.pdf",
 
-  researchFocus: [
-    "Privacy-preserving multi-robot coordination (DARA, PP-DARA, NNDARA, LDARA)",
-    "Decentralized scheduling & secure multi-party computation (MPC) with Shamir’s Secret Sharing",
-    "Actor-critic reinforcement learning for uncertain harvesting speeds",
-    "Field robotics for agriculture—strawberry harvesting systems",
-  ],
+    researchFocus: [
+    "Decentralized coordination and scheduling in multi-robot and cyber-physical systems",
+    "Secure and privacy-preserving computation for cooperative autonomy and decision-making",
+    "Learning-based control and reinforcement learning for dynamic and uncertain environments",
+    "Robotics applications in precision agriculture and intelligent automation",
+    ],
 
   publications: [
     { title: "A Secure MPC Framework for Decentralized Row Allocation in Cooperative Strawberry Harvesting", venue: "IEEE CASE, 2025", authors: "M. Alsayegh, Y. Xu", link: "https://ieeexplore.ieee.org/abstract/document/11163874" },
     { title: "Oblivious Markov Decision Processes for Robust Robotic Policy Execution", venue: "IEEE CDC, 2023", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/10383231/" },
     { title: "Decentralized Multi-Robot Information Gathering from Unknown Spatial Fields", venue: "IEEE RA-L, 2023", authors: "M. Alsayegh, A. Newaz, L. Bobadilla", link: "https://ieeexplore.ieee.org/abstract/document/10093018" },
-    // Add the rest here following the same shape
+    { title: "Lightweight Multi-Robot Communication Protocols for Information Synchronization", venue: "IEEE/RSJ IROS, 2020", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/9341480" },
+    { title: "Privacy-Preserving Multi-Robot Task Allocation via Secure MPC", venue: "ECC, 2022", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/9838150" },
   ],
 
   education: [
