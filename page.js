@@ -16,7 +16,7 @@ const DATA = {
   linkedinUrl: "https://www.linkedin.com/in/murtadhaalsayegh/",
   websiteUrl: "https://murtalsa.github.io/murtadhaalsayegh.io/",
   githubUrl: "https://github.com/MurtAlsa",
-  cvUrl: "https://murtalsa.github.io/murtadhaalsayegh.io/Murtadha_Alsayegh_CV.pdf",
+  cvUrl: "https://murtalsa.github.io/murtadhaalsayegh.io/MURTADHA_ALSAYEGH_CV.pdf",
 
     researchFocus: [
     "Decentralized coordination and scheduling in multi-robot and cyber-physical systems",
