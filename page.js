@@ -2,7 +2,7 @@
 import React, { useMemo } from "https://esm.sh/react";
 import { motion } from "https://esm.sh/framer-motion";
 import {
-  Mail, Linkedin, GraduationCap, FileText, Award, BookOpen, Cpu, Shield, Users, Github, Globe,
+  Mail, Linkedin, GraduationCap, FileText, Award, BookOpen, Cpu, Shield, Users, GitHub, Globe,
 } from "https://esm.sh/lucide-react";
 
 /** ====== DATA (edit freely) ====== **/
