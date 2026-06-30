@@ -22,7 +22,23 @@ const BookOpen = makeIcon("📘");
 const Cpu = makeIcon("⚙️");
 const Shield = makeIcon("🛡️");
 const Users = makeIcon("👥");
-const Github = makeIcon("GitHub");
+const Github = (props = {}) =>
+  React.createElement(
+    "span",
+    {
+      ...props,
+      style: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: ".65rem",
+        fontWeight: 700,
+        lineHeight: 1,
+      },
+      "aria-hidden": "true",
+    },
+    "GH"
+  );
 const Globe = makeIcon("🌐");
 
 /** ====== DATA (edit freely) ====== **/
