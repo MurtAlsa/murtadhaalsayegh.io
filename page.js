@@ -28,8 +28,8 @@ const Globe = makeIcon("🌐");
 /** ====== DATA (edit freely) ====== **/
 const DATA = {
   name: "Murtadha Alsayegh, Ph.D.",
-  tagline: "Privacy-Preserving Multi-Robot Coordination • Reinforcement Learning • Agricultural Robotics",
-  currentRole: "Postdoctoral Researcher, Dept. of Mechanical & Aerospace Engineering, University of Central Florida (UCF)",
+  tagline: "Robotics • Multi-Agent Systems • Privacy-Preserving AI • Reinforcement Learning",
+  currentRole: "Graduate Faculty Scholar, University of Central Florida (UCF)",
   location: "Orlando, FL, USA",
   email: "murtadha.alsayegh@ucf.edu",
   scholarUrl: "https://scholar.google.com/citations?user=8JA9lXMAAAAJ&hl=en",
@@ -38,55 +38,64 @@ const DATA = {
   githubUrl: "https://github.com/MurtAlsa",
   cvUrl: "https://murtalsa.github.io/murtadhaalsayegh.io/MURTADHA_ALSAYEGH_CV.pdf",
 
-    researchFocus: [
-    "Decentralized coordination and scheduling in multi-robot and cyber-physical systems",
-    "Secure and privacy-preserving computation for cooperative autonomy and decision-making",
-    "Learning-based control and reinforcement learning for dynamic and uncertain environments",
-    "Robotics applications in precision agriculture and intelligent automation",
-    ],
+  researchFocus: [
+    "Artificial intelligence, robotics, multi-agent systems, and distributed autonomous systems",
+    "Privacy-preserving AI, secure multi-party computation, and secure robotic communication",
+    "Reinforcement learning, motion planning, and decision-making under uncertainty",
+    "Human-robot collaboration and agricultural robotics for intelligent automation",
+  ],
 
   publications: [
-    { title: "A Secure MPC Framework for Decentralized Row Allocation in Cooperative Strawberry Harvesting", venue: "IEEE CASE, 2025", authors: "M. Alsayegh, Y. Xu", link: "https://ieeexplore.ieee.org/abstract/document/11163874" },
-    { title: "Oblivious Markov Decision Processes for Robust Robotic Policy Execution", venue: "IEEE CDC, 2023", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/10383231/" },
-    { title: "Decentralized Multi-Robot Information Gathering from Unknown Spatial Fields", venue: "IEEE RA-L, 2023", authors: "M. Alsayegh, A. Newaz, L. Bobadilla", link: "https://ieeexplore.ieee.org/abstract/document/10093018" },
-    { title: "Lightweight Multi-Robot Communication Protocols for Information Synchronization", venue: "IEEE/RSJ IROS, 2020", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/9341480" },
-    { title: "Privacy-Preserving Multi-Robot Task Allocation via Secure MPC", venue: "ECC, 2022", authors: "M. Alsayegh et al.", link: "https://ieeexplore.ieee.org/abstract/document/9838150" },
+    { title: "Decentralized Row Allocation for Harvesting Robots with Uncertain Harvesting Speeds in an Actor-Critic Structure", venue: "ANNSIM, 2026 (Accepted)", authors: "M. Alsayegh, Y. Xu", link: "" },
+    { title: "Differentiable Agent-Based Modeling for Multi-Echelon Supply Chains: Gradient-Based Optimization of Heterogeneous Policies at Scale", venue: "ANNSIM, 2026 (Accepted)", authors: "B. Soykan, M. Alsayegh, S. Mondesire, G. Rabadi", link: "" },
+    { title: "When One Agent Reshapes Another: Cross-Hessian Interpretation of Local Coupling in Multi-Agent Reinforcement Learning", venue: "XAI 2026 Late-Breaking Work Proceedings (Accepted)", authors: "R. Shefin, D. Gupta, M. Alsayegh, S. Alqahtani", link: "" },
+    { title: "A Secure Multi-Party Computation Framework for Decentralized Row Allocation in Cooperative Strawberry Harvesting Systems", venue: "IEEE CASE, 2025", authors: "M. Alsayegh, Y. Xu", link: "https://ieeexplore.ieee.org/abstract/document/11163874" },
+    { title: "Oblivious Markov Decision Processes: Planning and Policy Execution", venue: "IEEE CDC, 2023", authors: "M. Alsayegh, J. Fuentes, L. Bobadilla, D. A. Shell", link: "https://ieeexplore.ieee.org/abstract/document/10383231/" },
+    { title: "Decentralized Multi-Robot Information Gathering from Unknown Spatial Fields", venue: "IEEE RA-L, 2023", authors: "A. A. R. Newaz, M. Alsayegh, T. Alam, L. Bobadilla", link: "https://ieeexplore.ieee.org/abstract/document/10093018" },
+    { title: "Privacy-Preserving Multi-Robot Task Allocation via Secure Multi-Party Computation", venue: "ECC, 2022", authors: "M. Alsayegh, P. Vanegas, A. A. R. Newaz, L. Bobadilla, D. A. Shell", link: "https://ieeexplore.ieee.org/abstract/document/9838150" },
+    { title: "Lightweight Multi-Robot Communication Protocols for Information Synchronization", venue: "IEEE/RSJ IROS, 2020", authors: "M. Alsayegh, A. Dutta, P. Vanegas, L. Bobadilla", link: "https://ieeexplore.ieee.org/abstract/document/9341480" },
   ],
 
   education: [
-    { degree: "Ph.D., Computer Science", org: "Florida International University (FIU)", year: "2024" },
-    { degree: "M.S., Software Engineering", org: "University of Michigan–Dearborn", year: "" },
-    { degree: "B.S., Computer Science", org: "Lawrence Technological University", year: "" },
+    { degree: "Ph.D., Computer Science", org: "Florida International University, Miami, FL", year: "July 2024" },
+    { degree: "M.S., Software Engineering", org: "University of Michigan-Dearborn, Dearborn, MI", year: "April 2013" },
+    { degree: "B.S., Computer Science", org: "Lawrence Technological University, Southfield, MI", year: "December 2010" },
   ],
 
   highlights: [
-    "Designed decentralized auction-based algorithms for cooperative harvesters (DARA, LDARA)",
-    "Integrated secure MPC and Shamir’s Secret Sharing for privacy-preserving scheduling",
-    "Developed actor-critic policies robust to uncertain and partially observed velocities",
-    "Applied frameworks to strawberry fields with help-evaluation and fallback strategies",
+    "Developed privacy-preserving algorithms and secure communication protocols for multi-agent robotic systems",
+    "Designed decentralized motion planning methods for maximally informative robot trajectories in unknown spatial fields",
+    "Advanced secure multi-party computation methods for task allocation, row allocation, and cooperative autonomy",
+    "Contributed to USDA-funded agricultural robotics projects and interdisciplinary proposal development",
+    "Mentored graduate, undergraduate, and high school students in robotics, AI, and secure autonomous systems",
+    "Brought industrial automation and SCADA cybersecurity experience into cyber-physical systems research",
   ],
 
   teaching: [
-    "Artificial Intelligence",
-    "Reinforcement Learning",
-    "Robotics & Autonomous Systems",
-    "Algorithms & Data Structures",
-    "Cyber-Physical Systems / ICS Security",
+    "Teaching assistant for CAP 4630 Artificial Intelligence at Florida International University",
+    "Teaching assistant for CDA 4625 Introduction to Mobile Robotics at Florida International University",
+    "Designed and graded assignments on intelligent agents, adversarial search, motion planning, and reinforcement learning",
+    "AI4ALL Discover AI instructor and mentor, supporting student projects, presentations, ethical AI, privacy, and inclusion",
+    "Graduate and undergraduate mentoring in robotics, AI, multi-agent systems, and secure autonomous systems",
   ],
 
   service: [
-    "IEEE member; reviewer for robotics and control venues",
-    "Mentored graduate/undergraduate students and engaged in outreach",
+    "Reviewer for the European Control Conference (ECC), 2022",
+    "Reviewer for the IEEE International Conference on Robotics and Automation (ICRA), 2023-2026",
+    "Graduate Faculty Scholar contributing to modeling and simulation research and graduate education at UCF",
+    "Collaborator on multidisciplinary AI, robotics, autonomous systems, and workforce-development initiatives",
   ],
 
   awards: [
-    "High approval rates research impact indicators; national-interest aligned work (NIW)",
-    "Talks at UCF AI in Agriculture Symposium (AgAAID 2025)",
+    "Contributed to NSF, USDA-NIFA, and Department of Defense proposal development",
+    "Supported USDA-funded agricultural robotics and intelligent automation research",
+    "Mentored students and educators through robotics projects, with student recognition for research excellence",
   ],
 
   news: [
-    // { date: "Oct 2025", text: "Phone interview for Research Scientist (Reinforcement Learning) at Boston Dynamics." },
-    { date: "August 2025", text: "IEEE CASE paper on Secure MPC for strawberry harvesting coordination." },
+    { date: "2026", text: "Three papers accepted at ANNSIM 2026 and XAI 2026 on agricultural robotics, differentiable agent-based modeling, and multi-agent reinforcement learning." },
+    { date: "Jan 2026", text: "Appointed Graduate Faculty Scholar at the University of Central Florida." },
+    { date: "2025", text: "IEEE CASE paper published on secure multi-party computation for cooperative strawberry harvesting systems." },
   ],
 };
 
@@ -299,7 +308,7 @@ export default function PersonalPage() {
         React.createElement(
           "div",
           { className: "rounded-3xl border p-5 bg-white shadow-sm" },
-          React.createElement("h3", { className: "text-base font-semibold mb-2" }, "Awards & Highlights"),
+          React.createElement("h3", { className: "text-base font-semibold mb-2" }, "Funding & Mentoring"),
           React.createElement(
             "ul",
             { className: "list-disc pl-5 space-y-2 text-slate-800" },
@@ -381,9 +390,6 @@ export default function PersonalPage() {
               React.createElement(GraduationCap, { className: "w-4 h-4" }),
               "Google Scholar"
             )
-        ),
-        React.createElement("p", { className: "mt-4 text-xs text-slate-500" },
-          "For faculty applications, please refer to me as an Assistant Professor candidate. (Site auto-formats titles accordingly.)"
         )
       ),
     }),
