@@ -11,7 +11,7 @@ import {
   Cpu,
   Shield,
   Users,
-  Github,   // <-- FIXED (was GitHub)
+  Github,   // <-- FIXED (was Github)
   Globe,
 } from "https://esm.sh/lucide-react";
 
@@ -180,7 +180,7 @@ export default function PersonalPage() {
                   "a",
                   { href: DATA.githubUrl, target: "_blank", rel: "noreferrer", className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border hover:shadow-sm" },
                   React.createElement(Github, { className: "w-4 h-4" }),
-                  "GitHub"
+                  "Github"
                 ),
               DATA.cvUrl &&
                 React.createElement(
