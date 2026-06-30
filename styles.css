@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.min-h-screen { min-height: 100vh; }
+.bg-gradient-to-b { background-image: linear-gradient(to bottom, var(--tw-gradient-stops)); }
+.from-white { --tw-gradient-from: #fff; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0)); }
+.to-slate-50 { --tw-gradient-to: #f8fafc; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-white { background-color: #fff; }
+.bg-white\/90 { background-color: rgb(255 255 255 / .9); }
+.text-slate-900 { color: #0f172a; }
+.text-slate-800 { color: #1e293b; }
+.text-slate-700 { color: #334155; }
+.text-slate-600 { color: #475569; }
+.text-slate-500 { color: #64748b; }
+.sticky { position: sticky; }
+.relative { position: relative; }
+.top-0 { top: 0; }
+.z-40 { z-index: 40; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mt-1 { margin-top: .25rem; }
+.mt-2 { margin-top: .5rem; }
+.mt-3 { margin-top: .75rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-2 { margin-bottom: .5rem; }
+.mb-3 { margin-bottom: .75rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: .5rem; }
+.gap-3 { gap: .75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: .5rem; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: .75rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+.max-w-5xl { max-width: 64rem; }
+.max-w-6xl { max-width: 72rem; }
+.min-w-\[80px\] { min-width: 80px; }
+.w-4 { width: 1rem; }
+.h-4 { height: 1rem; }
+.w-6 { width: 1.5rem; }
+.h-6 { height: 1.5rem; }
+.flex-wrap { flex-wrap: wrap; }
+.list-disc { list-style-type: disc; }
+.border { border-width: 1px; border-style: solid; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.rounded-xl { border-radius: .75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.px-3 { padding-left: .75rem; padding-right: .75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-1\.5 { padding-top: .375rem; padding-bottom: .375rem; }
+.py-3 { padding-top: .75rem; padding-bottom: .75rem; }
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.pt-14 { padding-top: 3.5rem; }
+.pb-10 { padding-bottom: 2.5rem; }
+.pl-5 { padding-left: 1.25rem; }
+.text-center { text-align: center; }
+.text-xs { font-size: .75rem; line-height: 1rem; }
+.text-sm { font-size: .875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.leading-tight { line-height: 1.25; }
+.tracking-tight { letter-spacing: 0; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05); }
+.underline { text-decoration-line: underline; }
+.backdrop-blur { backdrop-filter: blur(8px); }
+.scroll-mt-24 { scroll-margin-top: 6rem; }
+
+.hover\:underline:hover { text-decoration-line: underline; }
+.hover\:shadow-sm:hover { box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05); }
+
+@supports (backdrop-filter: blur(0)) {
+  .supports-\[backdrop-filter\]\:bg-white\/70 {
+    background-color: rgb(255 255 255 / .7);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+}
