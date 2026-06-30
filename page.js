@@ -1,19 +1,29 @@
-// Self-contained imports (no globals needed)
-import React, { useMemo } from "https://esm.sh/react";
-import { motion } from "https://esm.sh/framer-motion";
-import {
-  Mail,
-  Linkedin,
-  GraduationCap,
-  FileText,
-  Award,
-  BookOpen,
-  Cpu,
-  Shield,
-  Users,
-  Github,   // <-- FIXED (was Github)
-  Globe,
-} from "https://esm.sh/lucide-react";
+import React, { useMemo } from "https://esm.sh/react@18";
+
+const motion = { div: "div" };
+
+const makeIcon = (label) => (props = {}) =>
+  React.createElement(
+    "span",
+    {
+      ...props,
+      style: { display: "inline-block", fontSize: "1rem", lineHeight: 1 },
+      "aria-hidden": "true",
+    },
+    label
+  );
+
+const Mail = makeIcon("✉️");
+const Linkedin = makeIcon("in");
+const GraduationCap = makeIcon("🎓");
+const FileText = makeIcon("📄");
+const Award = makeIcon("🏅");
+const BookOpen = makeIcon("📘");
+const Cpu = makeIcon("⚙️");
+const Shield = makeIcon("🛡️");
+const Users = makeIcon("👥");
+const Github = makeIcon("GitHub");
+const Globe = makeIcon("🌐");
 
 /** ====== DATA (edit freely) ====== **/
 const DATA = {
